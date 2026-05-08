@@ -1,0 +1,115 @@
+.summer-camp {
+  background: linear-gradient(135deg, #fff8f0 0%, #f0f9ff 100%);
+}
+
+.summer-camp__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.summer-camp__placeholder {
+  background: linear-gradient(135deg, var(--orange) 0%, #e07010 100%);
+  border-radius: 24px;
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: white;
+  font-weight: 700;
+}
+
+.summer-camp__placeholder img {
+  border-radius: 12px;
+  object-fit: cover;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.summer-camp__placeholder span {
+  font-size: 4rem;
+  text-align: center;
+  line-height: 70px;
+}
+.summer-camp__placeholder p {
+  opacity: 0.9;
+}
+
+.summer-camp__title {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0.75rem 0 1rem;
+  text-align: left;
+}
+
+.summer-camp__title span {
+  color: var(--orange);
+}
+
+.summer-camp__desc {
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 1.75rem;
+}
+
+.summer-camp__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summer-camp__highlight {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 0.85rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.summer-camp__highlight span {
+  font-size: 1.75rem;
+}
+.summer-camp__highlight p {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 0.35rem;
+}
+
+.summer-camp__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.summer-camp__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--gray);
+}
+
+@media (max-width: 900px) {
+  .summer-camp__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .summer-camp__title {
+    text-align: center;
+  }
+  .summer-camp__desc {
+    text-align: center;
+  }
+  .summer-camp__actions {
+    justify-content: center;
+  }
+}
