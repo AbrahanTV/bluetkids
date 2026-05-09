@@ -1,0 +1,124 @@
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.pricing-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  border: 2px solid transparent;
+  transition: transform 0.25s;
+}
+
+.pricing-card:hover { transform: translateY(-4px); }
+
+.pricing-card--featured {
+  border-color: var(--orange);
+  transform: scale(1.04);
+  box-shadow: 0 12px 48px rgba(247,148,29,0.2);
+}
+
+.pricing-card--featured:hover { transform: scale(1.04) translateY(-4px); }
+
+.pricing-card__badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--orange);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.3rem 1.1rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.pricing-card h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+.pricing-card--blue h3 { color: var(--blue); }
+.pricing-card--orange h3 { color: var(--orange); }
+.pricing-card--yellow h3 { color: #b88a00; }
+
+.pricing-card__desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card__currency {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.pricing-card__amount {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1;
+}
+
+.pricing-card__period {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.pricing-card__features {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.pricing-card__features li {
+  font-size: 0.92rem;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-card__check {
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.pricing-card--orange .pricing-card__check { color: var(--orange); }
+.pricing-card--yellow .pricing-card__check { color: #b88a00; }
+
+.pricing-card__cta { width: 100%; text-align: center; }
+
+.pricing__note {
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+.pricing__note a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .pricing__grid { grid-template-columns: 1fr; }
+  .pricing-card--featured { transform: none; }
+  .pricing-card--featured:hover { transform: translateY(-4px); }
+}

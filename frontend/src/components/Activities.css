@@ -1,0 +1,74 @@
+.activities {
+  background: var(--light);
+}
+
+.activities__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.activity-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s;
+  border-left: 5px solid transparent;
+}
+
+.activity-card:hover { transform: translateY(-4px); }
+
+.activity-card--blue { border-left-color: var(--blue); }
+.activity-card--orange { border-left-color: var(--orange); }
+.activity-card--yellow { border-left-color: var(--yellow); }
+
+.activity-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.activity-card__icon { font-size: 2rem; }
+
+.activity-card__day {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray);
+}
+
+.activity-card--blue .activity-card__day { color: var(--blue); }
+.activity-card--orange .activity-card__day { color: var(--orange); }
+.activity-card--yellow .activity-card__day { color: #b88a00; }
+
+.activity-card__age {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray);
+}
+
+.activity-card h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.activity-card p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .activities__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .activities__grid { grid-template-columns: 1fr; }
+}
